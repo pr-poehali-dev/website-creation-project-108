@@ -18,11 +18,12 @@ export function Header({ callbackForm, setCallbackForm, handleCallbackSubmit }: 
           <Icon name="Smile" size={32} className="text-primary" />
           <h1 className="text-2xl font-heading font-bold text-primary">Denta Plus</h1>
         </div>
-        <nav className="hidden md:flex gap-6">
-          <a href="#services" className="text-foreground hover:text-primary transition">Услуги</a>
-          <a href="#doctors" className="text-foreground hover:text-primary transition">Врачи</a>
-          <a href="#portfolio" className="text-foreground hover:text-primary transition">Портфолио</a>
-          <a href="#reviews" className="text-foreground hover:text-primary transition">Отзывы</a>
+        <nav className="hidden lg:flex gap-6 text-sm">
+          <a href="#about" className="text-foreground hover:text-primary transition">О клинике</a>
+          <a href="#services" className="text-foreground hover:text-primary transition">Услуги и цены</a>
+          <a href="#doctors" className="text-foreground hover:text-primary transition">Специалисты</a>
+          <a href="#offers" className="text-foreground hover:text-primary transition">Спецпредложения</a>
+          <a href="#faq" className="text-foreground hover:text-primary transition">Вопрос-ответ</a>
           <a href="#contacts" className="text-foreground hover:text-primary transition">Контакты</a>
         </nav>
         <Dialog>

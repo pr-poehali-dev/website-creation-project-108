@@ -40,87 +40,55 @@ export function ServicesSection({
     { name: 'Врачи клиники', specialty: 'Стоматологи высшей категории', experience: 'Опытные специалисты', photo: 'https://cdn.poehali.dev/files/specialist_page.jpg' }
   ];
 
-  const portfolio = [
-    { title: 'Отбеливание зубов', description: 'Результат после процедуры профессионального отбеливания' },
-    { title: 'Установка виниров', description: 'Красивая улыбка после установки виниров' },
-    { title: 'Имплантация', description: 'Восстановление зубного ряда' },
-    { title: 'Исправление прикуса', description: 'До и после лечения брекет-системой' }
-  ];
-
-  const reviews = [
-    { name: 'Ольга М.', rating: 5, text: 'Отличная клиника! Профессиональные врачи, современное оборудование. Теперь не боюсь ходить к стоматологу!' },
-    { name: 'Алексей К.', rating: 5, text: 'Делал имплантацию у доктора Иванова. Всё прошло безболезненно и быстро. Очень доволен результатом!' },
-    { name: 'Марина С.', rating: 5, text: 'Привела дочку к детскому стоматологу. Ребёнок не плакал, врач нашла подход. Спасибо большое!' }
-  ];
-
   const faqItems = [
     { question: 'Больно ли лечить зубы?', answer: 'Мы используем современные методы анестезии, которые делают лечение абсолютно безболезненным. Вы не почувствуете дискомфорта во время процедуры.' },
     { question: 'Сколько времени занимает первый приём?', answer: 'Первичная консультация обычно занимает 30-40 минут. Врач проведёт осмотр, сделает необходимые снимки и составит план лечения.' },
     { question: 'Какие гарантии вы даёте на лечение?', answer: 'Мы предоставляем гарантию на все виды лечения от 1 года до 5 лет в зависимости от процедуры. Детали гарантии прописываются в договоре.' },
-    { question: 'Можно ли оплатить лечение в рассрочку?', answer: 'Да, мы предлагаем беспроцентную рассрочку на все виды лечения. Подробности можно уточнить у администратора.' },
-    { question: 'Есть ли у вас парковка?', answer: 'Да, для наших пациентов доступна бесплатная парковка рядом с клиникой.' }
-  ];
-
-  const certificates = [
-    'Лицензия на медицинскую деятельность',
-    'Сертификаты специалистов',
-    'Членство в Ассоциации стоматологов',
-    'ISO 9001:2015'
+    { question: 'Можно ли оплатить лечение в рассрочку?', answer: 'Да, мы предлагаем беспроцентную рассрочку на все виды лечения. Подробности можно уточнить у администратора.' }
   ];
 
   return (
     <>
-      <section className="py-20 bg-muted/30">
+      <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">О нас</Badge>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Почему выбирают нас</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Мы создали клинику, где каждый пациент чувствует себя комфортно и получает лучшее лечение
+          <div className="text-center mb-16">
+            <Badge className="mb-4 text-base px-4 py-2">О клинике</Badge>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Преимущества Denta Plus</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Семейная стоматология с прозрачным подходом к лечению. План и стоимость фиксируются до начала процедур.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            <Card className="animate-scale-in hover:shadow-lg transition">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
               <CardHeader>
-                <Icon name="Award" size={40} className="text-primary mb-4" />
-                <CardTitle>9 врачей высшей категории</CardTitle>
+                <Icon name="Users" size={48} className="text-primary mx-auto mb-4" />
+                <CardTitle className="text-xl">Семейная стоматология</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Минимальный стаж наших специалистов — 15 лет. Регулярное повышение квалификации
+                  Скидка 10% на все стоматологические услуги для пенсионеров. Лечим всю семью с заботой и вниманием.
                 </p>
               </CardContent>
             </Card>
-            <Card className="animate-scale-in hover:shadow-lg transition" style={{ animationDelay: '0.1s' }}>
+            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
               <CardHeader>
-                <Icon name="Microscope" size={40} className="text-primary mb-4" />
-                <CardTitle>Лечение под микроскопом</CardTitle>
+                <Icon name="FileCheck" size={48} className="text-primary mx-auto mb-4" />
+                <CardTitle className="text-xl">Прозрачность цен</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  3D-томография, цифровое протезирование и собственная лаборатория
+                  План лечения и стоимость фиксируются до начала процедур. Никаких скрытых платежей.
                 </p>
               </CardContent>
             </Card>
-            <Card className="animate-scale-in hover:shadow-lg transition" style={{ animationDelay: '0.2s' }}>
+            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
               <CardHeader>
-                <Icon name="Percent" size={40} className="text-primary mb-4" />
-                <CardTitle>Скидка пенсионерам</CardTitle>
+                <Icon name="Microscope" size={48} className="text-primary mx-auto mb-4" />
+                <CardTitle className="text-xl">Современное оборудование</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Семейная стоматология: скидка 10% на все услуги для пенсионеров
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="animate-scale-in hover:shadow-lg transition" style={{ animationDelay: '0.3s' }}>
-              <CardHeader>
-                <Icon name="MapPin" size={40} className="text-primary mb-4" />
-                <CardTitle>3 филиала</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Норильск, Кайеркан и Дудинка. Выберите удобное расположение
+                  Лечение под микроскопом, 3D-томография, цифровое протезирование и собственная лаборатория.
                 </p>
               </CardContent>
             </Card>
@@ -128,18 +96,19 @@ export function ServicesSection({
         </div>
       </section>
 
-      <section id="services" className="py-20">
+      <section id="services" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Наши услуги</Badge>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Полный спектр стоматологических услуг</h2>
+          <div className="text-center mb-16">
+            <Badge className="mb-4 text-base px-4 py-2">Услуги</Badge>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Услуги и цены</h2>
+            <p className="text-lg text-muted-foreground">Полный спектр стоматологических услуг для всей семьи</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Card key={service.id} className="hover:shadow-lg transition animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={service.id} className="hover:shadow-xl transition-all duration-300 animate-fade-in border-2 hover:border-primary/20" style={{ animationDelay: `${index * 0.05}s` }}>
                 <CardHeader>
                   <Icon name={service.icon as any} size={40} className="text-primary mb-4" />
-                  <CardTitle>{service.name}</CardTitle>
+                  <CardTitle className="text-lg">{service.name}</CardTitle>
                   <CardDescription className="text-2xl font-heading font-bold text-primary">
                     от {service.price.toLocaleString('ru-RU')} ₽
                   </CardDescription>
@@ -155,121 +124,62 @@ export function ServicesSection({
         </div>
       </section>
 
-      <section id="calculator" className="py-20 bg-muted/30">
+      <section id="offers" className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4">Калькулятор</Badge>
-              <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Рассчитайте стоимость лечения</h2>
-              <p className="text-muted-foreground">Выберите необходимые услуги и узнайте примерную стоимость</p>
-            </div>
-            <Card>
+          <div className="text-center mb-16">
+            <Badge className="mb-4 text-base px-4 py-2">Акции</Badge>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Специальные предложения</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20 hover:shadow-xl transition-all">
               <CardHeader>
-                <CardTitle>Выберите услуги</CardTitle>
-                <CardDescription>Отметьте все процедуры, которые вам необходимы</CardDescription>
+                <Badge className="w-fit mb-3 bg-primary text-primary-foreground">Скидка 10%</Badge>
+                <CardTitle className="text-2xl">Для пенсионеров</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                {services.map((service) => (
-                  <div key={service.id} className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/50 transition">
-                    <div className="flex items-center gap-3">
-                      <Checkbox
-                        checked={selectedServices.includes(service.id)}
-                        onCheckedChange={() => handleServiceToggle(service.id, service.price)}
-                      />
-                      <div>
-                        <div className="font-medium">{service.name}</div>
-                        <div className="text-sm text-muted-foreground">{service.price.toLocaleString('ru-RU')} ₽</div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-                <div className="pt-6 border-t">
-                  <div className="flex justify-between items-center text-2xl font-heading font-bold">
-                    <span>Итого:</span>
-                    <span className="text-primary">{totalCost.toLocaleString('ru-RU')} ₽</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-2">* Точная стоимость определяется после консультации врача</p>
-                </div>
+              <CardContent>
+                <p className="text-muted-foreground text-lg">
+                  Постоянная скидка 10% на все стоматологические услуги при предъявлении пенсионного удостоверения.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-gradient-to-br from-accent/10 to-primary/10 border-2 border-primary/20 hover:shadow-xl transition-all">
+              <CardHeader>
+                <Badge className="w-fit mb-3 bg-accent text-accent-foreground">Рассрочка 0%</Badge>
+                <CardTitle className="text-2xl">Лечение в рассрочку</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-lg">
+                  Беспроцентная рассрочка на все виды лечения. Начните лечение прямо сейчас, платите постепенно.
+                </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      <section id="doctors" className="py-20">
+      <section id="doctors" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Наша команда</Badge>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Профессиональные врачи</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Каждый специалист имеет высшую квалификационную категорию и большой опыт работы
-            </p>
+          <div className="text-center mb-16">
+            <Badge className="mb-4 text-base px-4 py-2">Команда</Badge>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Наши специалисты</h2>
+            <p className="text-lg text-muted-foreground">9 врачей высшей категории с минимальным стажем 15 лет</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {doctors.map((doctor, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="aspect-square overflow-hidden bg-muted">
                   <img 
                     src={doctor.photo} 
                     alt={doctor.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <CardHeader className="text-center">
-                  <CardTitle className="text-lg">{doctor.name}</CardTitle>
-                  <CardDescription className="text-sm">{doctor.specialty}</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <Badge variant="secondary">{doctor.experience}</Badge>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Портфолио</Badge>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Наши работы</h2>
-            <p className="text-muted-foreground">Примеры успешно выполненных процедур</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {portfolio.map((item, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <Icon name="Image" size={64} className="text-primary/40" />
-                </div>
                 <CardHeader>
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardDescription>{item.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="reviews" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Отзывы</Badge>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Что говорят наши пациенты</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((review, index) => (
-              <Card key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardHeader>
-                  <div className="flex gap-1 mb-2">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={20} className="text-yellow-400 fill-yellow-400" />
-                    ))}
-                  </div>
-                  <CardTitle className="text-lg">{review.name}</CardTitle>
+                  <CardTitle className="text-xl">{doctor.name}</CardTitle>
+                  <CardDescription className="text-base">{doctor.specialty}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground italic">&ldquo;{review.text}&rdquo;</p>
+                  <p className="text-sm text-muted-foreground">{doctor.experience}</p>
                 </CardContent>
               </Card>
             ))}
@@ -277,45 +187,19 @@ export function ServicesSection({
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
+      <section id="faq" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Сертификаты</Badge>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Наши документы</h2>
-            <p className="text-muted-foreground">Мы работаем официально и имеем все необходимые лицензии</p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {certificates.map((cert, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardHeader>
-                  <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                    <Icon name="Award" size={40} className="text-primary" />
-                  </div>
-                  <CardTitle className="text-sm">{cert}</CardTitle>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">FAQ</Badge>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Частые вопросы</h2>
-            <p className="text-muted-foreground">Ответы на самые популярные вопросы наших пациентов</p>
+          <div className="text-center mb-16">
+            <Badge className="mb-4 text-base px-4 py-2">FAQ</Badge>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Вопрос-ответ</h2>
+            <p className="text-lg text-muted-foreground">Ответы на часто задаваемые вопросы</p>
           </div>
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="space-y-4">
               {faqItems.map((item, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left font-medium">
-                    {item.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {item.answer}
-                  </AccordionContent>
+                <AccordionItem key={index} value={`item-${index}`} className="bg-white rounded-lg border-2 px-6">
+                  <AccordionTrigger className="text-lg font-semibold hover:text-primary">{item.question}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-base">{item.answer}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
@@ -323,57 +207,60 @@ export function ServicesSection({
         </div>
       </section>
 
-      <section id="appointment" className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section id="appointment" className="py-20 bg-gradient-to-br from-primary to-accent">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-4">Запись на приём</Badge>
-              <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Запишитесь на консультацию</h2>
-              <p className="text-muted-foreground">Заполните форму и мы свяжемся с вами для уточнения деталей</p>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-white">Запись на приём</h2>
+              <p className="text-xl text-white/90">Заполните форму, и мы свяжемся с вами для подтверждения записи</p>
             </div>
-            <Card>
-              <CardContent className="pt-6">
-                <form onSubmit={handleAppointmentSubmit} className="space-y-4">
+            <Card className="shadow-2xl">
+              <CardContent className="p-8">
+                <form onSubmit={handleAppointmentSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name">Ваше имя *</Label>
+                    <Label htmlFor="name" className="text-base">Ваше имя *</Label>
                     <Input
                       id="name"
                       value={appointmentForm.name}
                       onChange={(e) => setAppointmentForm({ ...appointmentForm, name: e.target.value })}
                       required
+                      className="mt-2 h-12"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone">Телефон *</Label>
+                    <Label htmlFor="phone" className="text-base">Телефон *</Label>
                     <Input
                       id="phone"
                       type="tel"
                       value={appointmentForm.phone}
                       onChange={(e) => setAppointmentForm({ ...appointmentForm, phone: e.target.value })}
                       required
+                      className="mt-2 h-12"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="service">Интересующая услуга</Label>
+                    <Label htmlFor="service" className="text-base">Услуга</Label>
                     <Input
                       id="service"
                       value={appointmentForm.service}
                       onChange={(e) => setAppointmentForm({ ...appointmentForm, service: e.target.value })}
-                      placeholder="Например: лечение кариеса"
+                      placeholder="Например: консультация, лечение кариеса"
+                      className="mt-2 h-12"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="date">Предпочтительная дата</Label>
+                    <Label htmlFor="date" className="text-base">Желаемая дата</Label>
                     <Input
                       id="date"
                       type="date"
                       value={appointmentForm.date}
                       onChange={(e) => setAppointmentForm({ ...appointmentForm, date: e.target.value })}
+                      className="mt-2 h-12"
                     />
                   </div>
-                  <Button type="submit" className="w-full" size="lg">
-                    <Icon name="Send" size={20} className="mr-2" />
-                    Отправить заявку
+                  <Button type="submit" size="lg" className="w-full text-lg h-14">
+                    <Icon name="Calendar" size={20} className="mr-2" />
+                    Записаться на приём
                   </Button>
                 </form>
               </CardContent>
