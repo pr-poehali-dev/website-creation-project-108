@@ -9,21 +9,21 @@ export function Footer() {
       address: 'пл. Металлургов, 8',
       phone: '+7 (913) 500-20-60',
       schedule: 'Ежедневно: 9:00 - 21:00',
-      mapUrl: 'https://yandex.ru/maps/-/CDdkVVIk'
+      mapUrl: 'https://yandex.ru/map-widget/v1/?ll=88.201753%2C69.346242&mode=search&oid=145879116078&ol=biz&z=16'
     },
     {
       city: 'Кайеркан',
       address: 'ул. Надеждинская, 2',
       phone: '+7 (913) 497-77-52',
       schedule: 'Ежедневно: 9:00 - 21:00',
-      mapUrl: 'https://yandex.ru/maps/-/CDdkVRar'
+      mapUrl: 'https://yandex.ru/map-widget/v1/?ll=87.336661%2C69.400000&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc5NzIxNhJQ0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7Rj9GA0YHQutC40Lkg0LrRgNCw0LksINCa0LDQudC10YDQutCw0L0sINGD0LvQuNGG0LAgNDciCg0FRFRCFWbDW0I%2C&z=16'
     },
     {
       city: 'Дудинка',
       address: 'ул. Дудинская, 9',
       phone: '+7 (913) 503-97-70',
       schedule: 'Ежедневно: 9:00 - 21:00',
-      mapUrl: 'https://yandex.ru/maps/-/CDdkVVsB'
+      mapUrl: 'https://yandex.ru/map-widget/v1/?ll=86.177869%2C69.405520&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc5NzIyMBJQ0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7Rj9GA0YHQutC40Lkg0LrRgNCw0LksINCU0YPQtNC40L3QutCwLCDRg9C70LjRhtCwIDkiCg3_RVRCFaqsW0I%2C&z=16'
     }
   ];
 

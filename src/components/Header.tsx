@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -11,6 +12,8 @@ interface HeaderProps {
 }
 
 export function Header({ callbackForm, setCallbackForm, handleCallbackSubmit }: HeaderProps) {
+  const [servicesOpen, setServicesOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -20,7 +23,22 @@ export function Header({ callbackForm, setCallbackForm, handleCallbackSubmit }: 
         </div>
         <nav className="hidden lg:flex gap-6 text-sm">
           <a href="#about" className="text-foreground hover:text-primary transition">О клинике</a>
-          <a href="#services" className="text-foreground hover:text-primary transition">Услуги и цены</a>
+          <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
+            <a href="#services" className="text-foreground hover:text-primary transition flex items-center gap-1">
+              Услуги и цены
+              <Icon name="ChevronDown" size={16} className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+            </a>
+            {servicesOpen && (
+              <div className="absolute top-full left-0 mt-2 bg-white border rounded-lg shadow-lg py-2 min-w-[200px] animate-fade-in">
+                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Лечение</a>
+                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Профилактика</a>
+                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Детская стоматология</a>
+                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Хирургия</a>
+                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Протезирование</a>
+                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Ортодонтия</a>
+              </div>
+            )}
+          </div>
           <a href="#doctors" className="text-foreground hover:text-primary transition">Специалисты</a>
           <a href="#offers" className="text-foreground hover:text-primary transition">Спецпредложения</a>
           <a href="#faq" className="text-foreground hover:text-primary transition">Вопрос-ответ</a>

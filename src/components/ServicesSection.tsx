@@ -124,34 +124,74 @@ export function ServicesSection({
         </div>
       </section>
 
-      <section id="offers" className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section id="offers" className="py-20 bg-gradient-to-br from-slate-700 to-slate-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 text-base px-4 py-2">Акции</Badge>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Специальные предложения</h2>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Наши программы и спецпредложения</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20 hover:shadow-xl transition-all">
-              <CardHeader>
-                <Badge className="w-fit mb-3 bg-primary text-primary-foreground">Скидка 10%</Badge>
-                <CardTitle className="text-2xl">Для пенсионеров</CardTitle>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="overflow-hidden border-0 hover:shadow-2xl transition-all duration-300 group">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/34b71de7-b2df-41da-8761-a6f2f258774a/files/06f3dee2-70d7-461e-9469-91961db245bf.jpg"
+                  alt="Скидка для пенсионеров"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <CardHeader className="bg-white/95">
+                <CardTitle className="text-xl mb-2">10% СКИДКА</CardTitle>
+                <CardDescription className="text-base text-foreground">
+                  DENTA PLUS заботится о старшем поколении! 10% скидка на все стоматологические услуги для пенсионеров
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-lg">
-                  Постоянная скидка 10% на все стоматологические услуги при предъявлении пенсионного удостоверения.
-                </p>
-              </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-accent/10 to-primary/10 border-2 border-primary/20 hover:shadow-xl transition-all">
-              <CardHeader>
-                <Badge className="w-fit mb-3 bg-accent text-accent-foreground">Рассрочка 0%</Badge>
-                <CardTitle className="text-2xl">Лечение в рассрочку</CardTitle>
+
+            <Card className="overflow-hidden border-0 hover:shadow-2xl transition-all duration-300 group">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/34b71de7-b2df-41da-8761-a6f2f258774a/files/05b05010-94af-483a-bb10-fb4b2e412691.jpg"
+                  alt="Скидка для участников СВО"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <CardHeader className="bg-white/95">
+                <CardTitle className="text-xl mb-2">20% СКИДКА</CardTitle>
+                <CardDescription className="text-base text-foreground">
+                  DENTA PLUS — поддержка защитников Родины! Скидка 20% на стоматологические услуги для участников СВО
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-lg">
-                  Беспроцентная рассрочка на все виды лечения. Начните лечение прямо сейчас, платите постепенно.
-                </p>
-              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden border-0 hover:shadow-2xl transition-all duration-300 group">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/34b71de7-b2df-41da-8761-a6f2f258774a/files/4dac6b96-6809-462f-8a26-1091aac76330.jpg"
+                  alt="Бесплатная консультация"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <CardHeader className="bg-white/95">
+                <CardTitle className="text-xl mb-2">БЕСПЛАТНАЯ</CardTitle>
+                <CardDescription className="text-base text-foreground">
+                  консультация в DENTA PLUS — без записи, каждый день! Узнайте все о здоровье ваших зубов
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="overflow-hidden border-0 hover:shadow-2xl transition-all duration-300 group">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/34b71de7-b2df-41da-8761-a6f2f258774a/files/bf434fe5-0d59-4c14-af5c-1f2277254697.jpg"
+                  alt="Возврат налога"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <CardHeader className="bg-white/95">
+                <CardTitle className="text-xl mb-2">ВОЗВРАТ НАЛОГА</CardTitle>
+                <CardDescription className="text-base text-foreground">
+                  Верните до 13% от стоимости лечения! DENTA PLUS поможет оформить документы для налогового вычета
+                </CardDescription>
+              </CardHeader>
             </Card>
           </div>
         </div>
