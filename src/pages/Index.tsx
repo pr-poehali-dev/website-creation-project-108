@@ -27,7 +27,7 @@ export default function Index() {
     { id: '14', name: 'Имплантация (1 имплант)', price: 35000, icon: 'Drill' },
     { id: '15', name: 'Брекет-система (1 челюсть)', price: 45000, icon: 'AlignJustify' },
     { id: '16', name: 'Отбеливание зубов', price: 15000, icon: 'Smile' }
-  ];}
+  ];
 
   const handleServiceToggle = (serviceId: string, price: number) => {
     if (selectedServices.includes(serviceId)) {
