@@ -166,16 +166,17 @@ export function ServicesSection({
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {doctors.map((doctor, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="aspect-square overflow-hidden bg-muted">
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 animate-scale-in group" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="aspect-square overflow-hidden bg-muted relative">
                   <img 
                     src={doctor.photo} 
                     alt={doctor.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-2 transition-all duration-700 ease-out"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl">{doctor.name}</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">{doctor.name}</CardTitle>
                   <CardDescription className="text-base">{doctor.specialty}</CardDescription>
                 </CardHeader>
                 <CardContent>

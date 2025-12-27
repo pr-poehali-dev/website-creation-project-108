@@ -8,19 +8,22 @@ export function Footer() {
       city: 'Норильск',
       address: 'пл. Металлургов, 8',
       phone: '+7 (913) 500-20-60',
-      schedule: 'Ежедневно: 9:00 - 21:00'
+      schedule: 'Ежедневно: 9:00 - 21:00',
+      mapUrl: 'https://yandex.ru/maps/-/CDdkVVIk'
     },
     {
       city: 'Кайеркан',
       address: 'ул. Надеждинская, 2',
       phone: '+7 (913) 497-77-52',
-      schedule: 'Ежедневно: 9:00 - 21:00'
+      schedule: 'Ежедневно: 9:00 - 21:00',
+      mapUrl: 'https://yandex.ru/maps/-/CDdkVRar'
     },
     {
       city: 'Дудинка',
       address: 'ул. Дудинская, 9',
       phone: '+7 (913) 503-97-70',
-      schedule: 'Ежедневно: 9:00 - 21:00'
+      schedule: 'Ежедневно: 9:00 - 21:00',
+      mapUrl: 'https://yandex.ru/maps/-/CDdkVVsB'
     }
   ];
 
@@ -33,16 +36,26 @@ export function Footer() {
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Наши адреса</h2>
             <p className="text-lg text-muted-foreground">3 филиала в регионе для вашего удобства</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
             {branches.map((branch, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30 overflow-hidden group">
+                <div className="h-48 bg-muted relative overflow-hidden">
+                  <iframe
+                    src={branch.mapUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    className="grayscale group-hover:grayscale-0 transition-all duration-300"
+                  ></iframe>
+                </div>
                 <CardHeader className="text-center pb-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon name="MapPin" size={32} className="text-primary" />
                   </div>
                   <CardTitle className="text-2xl text-primary">{branch.city}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center space-y-3">
+                <CardContent className="text-center space-y-3 pb-6">
                   <div className="flex items-start justify-center gap-2 text-muted-foreground">
                     <Icon name="MapPin" size={18} className="text-primary mt-1 flex-shrink-0" />
                     <p>{branch.address}</p>
@@ -57,6 +70,15 @@ export function Footer() {
                     <Icon name="Clock" size={18} className="text-primary flex-shrink-0" />
                     <p>{branch.schedule}</p>
                   </div>
+                  <a 
+                    href={branch.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:underline text-sm font-medium mt-2"
+                  >
+                    <Icon name="ExternalLink" size={16} />
+                    Открыть на карте
+                  </a>
                 </CardContent>
               </Card>
             ))}
