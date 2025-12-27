@@ -12,6 +12,7 @@ interface Service {
   name: string;
   price: number;
   icon: string;
+  category: string;
 }
 
 interface ServicesSectionProps {
@@ -33,6 +34,8 @@ export function ServicesSection({
   setAppointmentForm,
   handleAppointmentSubmit
 }: ServicesSectionProps) {
+  const categories = ['Лечение', 'Профилактика', 'Детская стоматология', 'Хирургия', 'Протезирование', 'Ортодонтия'];
+
   const doctors = [
     { name: 'Команда Denta Plus', specialty: 'Профессиональная команда стоматологов', experience: 'Более 15 лет опыта', photo: 'https://cdn.poehali.dev/files/28.06.25 (24)_resized.jpg' },
     { name: 'Администратор клиники', specialty: 'Запись на приём и консультации', experience: 'Всегда рады помочь', photo: 'https://cdn.poehali.dev/files/Дента плюс 7.03.25 (289) копия_resized.jpg' },
@@ -103,24 +106,33 @@ export function ServicesSection({
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Услуги и цены</h2>
             <p className="text-lg text-muted-foreground">Полный спектр стоматологических услуг для всей семьи</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <Card key={service.id} className="hover:shadow-xl transition-all duration-300 animate-fade-in border-2 hover:border-primary/20" style={{ animationDelay: `${index * 0.05}s` }}>
-                <CardHeader>
-                  <Icon name={service.icon as any} size={40} className="text-primary mb-4" />
-                  <CardTitle className="text-lg">{service.name}</CardTitle>
-                  <CardDescription className="text-2xl font-heading font-bold text-primary">
-                    от {service.price.toLocaleString('ru-RU')} ₽
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full" onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}>
-                    Записаться
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          {categories.map((category, catIndex) => {
+            const categoryServices = services.filter(s => s.category === category);
+            if (categoryServices.length === 0) return null;
+            return (
+              <div key={category} id={`service-${category.toLowerCase().replace(/\s+/g, '-')}`} className="mb-16">
+                <h3 className="text-3xl font-heading font-bold mb-8 text-center">{category}</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {categoryServices.map((service, index) => (
+                    <Card key={service.id} className="hover:shadow-xl transition-all duration-300 animate-fade-in border-2 hover:border-primary/20" style={{ animationDelay: `${(catIndex * 4 + index) * 0.05}s` }}>
+                      <CardHeader>
+                        <Icon name={service.icon as any} size={40} className="text-primary mb-4" />
+                        <CardTitle className="text-lg">{service.name}</CardTitle>
+                        <CardDescription className="text-2xl font-heading font-bold text-primary">
+                          от {service.price.toLocaleString('ru-RU')} ₽
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <Button className="w-full" onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}>
+                          Записаться
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

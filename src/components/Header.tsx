@@ -30,12 +30,12 @@ export function Header({ callbackForm, setCallbackForm, handleCallbackSubmit }: 
             </a>
             {servicesOpen && (
               <div className="absolute top-full left-0 mt-2 bg-white border rounded-lg shadow-lg py-2 min-w-[200px] animate-fade-in">
-                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Лечение</a>
-                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Профилактика</a>
-                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Детская стоматология</a>
-                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Хирургия</a>
-                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Протезирование</a>
-                <a href="#services" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Ортодонтия</a>
+                <a href="#service-лечение" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Лечение</a>
+                <a href="#service-профилактика" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Профилактика</a>
+                <a href="#service-детская-стоматология" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Детская стоматология</a>
+                <a href="#service-хирургия" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Хирургия</a>
+                <a href="#service-протезирование" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Протезирование</a>
+                <a href="#service-ортодонтия" className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition">Ортодонтия</a>
               </div>
             )}
           </div>
