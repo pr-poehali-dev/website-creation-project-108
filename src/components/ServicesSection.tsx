@@ -79,7 +79,7 @@ export function ServicesSection({
               Мы создали клинику, где каждый пациент чувствует себя комфортно и получает лучшее лечение
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-4 gap-6">
             <Card className="animate-scale-in hover:shadow-lg transition">
               <CardHeader>
                 <Icon name="Award" size={40} className="text-primary mb-4" />
@@ -110,6 +110,17 @@ export function ServicesSection({
               <CardContent>
                 <p className="text-muted-foreground">
                   Разрабатываем персональный план лечения с учётом всех особенностей пациента
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="animate-scale-in hover:shadow-lg transition" style={{ animationDelay: '0.3s' }}>
+              <CardHeader>
+                <Icon name="MapPin" size={40} className="text-primary mb-4" />
+                <CardTitle>4 филиала</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Выбирайте удобное расположение в разных районах Норильска
                 </p>
               </CardContent>
             </Card>

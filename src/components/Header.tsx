@@ -16,7 +16,7 @@ export function Header({ callbackForm, setCallbackForm, handleCallbackSubmit }: 
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Icon name="Smile" size={32} className="text-primary" />
-          <h1 className="text-2xl font-heading font-bold text-primary">ДентаПро</h1>
+          <h1 className="text-2xl font-heading font-bold text-primary">Denta Plus</h1>
         </div>
         <nav className="hidden md:flex gap-6">
           <a href="#services" className="text-foreground hover:text-primary transition">Услуги</a>

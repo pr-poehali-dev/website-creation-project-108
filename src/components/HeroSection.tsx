@@ -7,13 +7,13 @@ export function HeroSection() {
     <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/5 py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl animate-fade-in">
-          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Современная стоматология</Badge>
+          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Клиника эстетической стоматологии</Badge>
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-foreground">
-            Здоровая улыбка начинается здесь
+            Мы готовы помочь сделать вашу улыбку сияющей и белоснежной!
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Профессиональное лечение зубов с использованием современных технологий. 
-            Безболезненно, быстро, с гарантией качества.
+            «Дента Плюс» — это клиника эстетической стоматологии.
+            Мы подарим вам здоровую и красивую улыбку!
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="gap-2" onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -27,16 +27,16 @@ export function HeroSection() {
           </div>
           <div className="grid grid-cols-3 gap-6 mt-12">
             <div className="text-center">
-              <div className="text-3xl font-heading font-bold text-primary mb-2">15+</div>
-              <div className="text-sm text-muted-foreground">лет опыта</div>
+              <div className="text-3xl font-heading font-bold text-primary mb-2">4.5</div>
+              <div className="text-sm text-muted-foreground">рейтинг</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-heading font-bold text-primary mb-2">5000+</div>
-              <div className="text-sm text-muted-foreground">пациентов</div>
+              <div className="text-3xl font-heading font-bold text-primary mb-2">456</div>
+              <div className="text-sm text-muted-foreground">оценок</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-heading font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">гарантия</div>
+              <div className="text-3xl font-heading font-bold text-primary mb-2">4</div>
+              <div className="text-sm text-muted-foreground">филиала</div>
             </div>
           </div>
         </div>
