@@ -34,10 +34,10 @@ export function ServicesSection({
   handleAppointmentSubmit
 }: ServicesSectionProps) {
   const doctors = [
-    { name: 'Иванов Иван Иванович', specialty: 'Главный врач, стоматолог-хирург', experience: '15 лет опыта' },
-    { name: 'Петрова Анна Сергеевна', specialty: 'Стоматолог-терапевт', experience: '10 лет опыта' },
-    { name: 'Смирнов Дмитрий Олегович', specialty: 'Стоматолог-ортопед', experience: '12 лет опыта' },
-    { name: 'Кузнецова Мария Ивановна', specialty: 'Детский стоматолог', experience: '8 лет опыта' }
+    { name: 'Команда Denta Plus', specialty: 'Профессиональная команда стоматологов', experience: 'Более 15 лет опыта', photo: 'https://cdn.poehali.dev/files/28.06.25 (24)_resized.jpg' },
+    { name: 'Администратор клиники', specialty: 'Запись на приём и консультации', experience: 'Всегда рады помочь', photo: 'https://cdn.poehali.dev/files/Дента плюс 7.03.25 (289) копия_resized.jpg' },
+    { name: 'Администратор клиники', specialty: 'Запись на приём и консультации', experience: 'Всегда рады помочь', photo: 'https://cdn.poehali.dev/files/Дента плюс 10.06.25 (134) копия_resized.jpg' },
+    { name: 'Врачи клиники', specialty: 'Стоматологи высшей категории', experience: 'Опытные специалисты', photo: 'https://cdn.poehali.dev/files/specialist_page.jpg' }
   ];
 
   const portfolio = [
@@ -207,15 +207,19 @@ export function ServicesSection({
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {doctors.map((doctor, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardHeader>
-                  <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                    <Icon name="User" size={48} className="text-primary" />
-                  </div>
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="aspect-square overflow-hidden bg-muted">
+                  <img 
+                    src={doctor.photo} 
+                    alt={doctor.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader className="text-center">
                   <CardTitle className="text-lg">{doctor.name}</CardTitle>
                   <CardDescription className="text-sm">{doctor.specialty}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="text-center">
                   <Badge variant="secondary">{doctor.experience}</Badge>
                 </CardContent>
               </Card>
