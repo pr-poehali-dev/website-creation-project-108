@@ -12,11 +12,13 @@ export default function Index() {
 
   const services = [
     { id: '1', name: 'Профессиональная чистка зубов', price: 3500, icon: 'Sparkles' },
-    { id: '2', name: 'Лечение кариеса', price: 5000, icon: 'Stethoscope' },
-    { id: '3', name: 'Отбеливание зубов', price: 15000, icon: 'Smile' },
-    { id: '4', name: 'Установка коронки', price: 25000, icon: 'Crown' },
-    { id: '5', name: 'Имплантация зуба', price: 45000, icon: 'Drill' },
-    { id: '6', name: 'Исправление прикуса', price: 80000, icon: 'AlignJustify' }
+    { id: '2', name: 'Лечение кариеса, пульпита, периодонтита', price: 5000, icon: 'Stethoscope' },
+    { id: '3', name: 'Эстетическая реставрация', price: 8000, icon: 'Palette' },
+    { id: '4', name: 'Детская стоматология', price: 3000, icon: 'Baby' },
+    { id: '5', name: 'Хирургия (удаление зубов)', price: 4500, icon: 'Scissors' },
+    { id: '6', name: 'Протезирование (съемное и несъемное)', price: 25000, icon: 'Crown' },
+    { id: '7', name: 'Коронки на имплантах', price: 45000, icon: 'Drill' },
+    { id: '8', name: 'Ортодонтия (брекеты)', price: 80000, icon: 'AlignJustify' }
   ];
 
   const handleServiceToggle = (serviceId: string, price: number) => {

@@ -7,13 +7,12 @@ export function HeroSection() {
     <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/5 py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl animate-fade-in">
-          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Клиника эстетической стоматологии</Badge>
+          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Семейная стоматология</Badge>
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-foreground">
             Мы готовы помочь сделать вашу улыбку сияющей и белоснежной!
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            «Дента Плюс» — это клиника эстетической стоматологии.
-            Мы подарим вам здоровую и красивую улыбку!
+            План лечения и стоимость фиксируются до начала процедур. Прозрачность и качество — наши главные принципы.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="gap-2" onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -25,18 +24,22 @@ export function HeroSection() {
               Рассчитать стоимость
             </Button>
           </div>
-          <div className="grid grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             <div className="text-center">
-              <div className="text-3xl font-heading font-bold text-primary mb-2">4.5</div>
-              <div className="text-sm text-muted-foreground">рейтинг</div>
+              <div className="text-3xl font-heading font-bold text-primary mb-2">9</div>
+              <div className="text-sm text-muted-foreground">врачей высшей категории</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-heading font-bold text-primary mb-2">456</div>
-              <div className="text-sm text-muted-foreground">оценок</div>
+              <div className="text-3xl font-heading font-bold text-primary mb-2">11</div>
+              <div className="text-sm text-muted-foreground">лет работы</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-heading font-bold text-primary mb-2">4</div>
-              <div className="text-sm text-muted-foreground">филиала</div>
+              <div className="text-3xl font-heading font-bold text-primary mb-2">10 000+</div>
+              <div className="text-sm text-muted-foreground">довольных клиентов</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-heading font-bold text-primary mb-2">3</div>
+              <div className="text-sm text-muted-foreground">филиала в регионе</div>
             </div>
           </div>
         </div>

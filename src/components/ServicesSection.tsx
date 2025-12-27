@@ -83,44 +83,44 @@ export function ServicesSection({
             <Card className="animate-scale-in hover:shadow-lg transition">
               <CardHeader>
                 <Icon name="Award" size={40} className="text-primary mb-4" />
-                <CardTitle>Опытные врачи</CardTitle>
+                <CardTitle>9 врачей высшей категории</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Наши специалисты имеют опыт работы более 10 лет и регулярно повышают квалификацию
+                  Минимальный стаж наших специалистов — 15 лет. Регулярное повышение квалификации
                 </p>
               </CardContent>
             </Card>
             <Card className="animate-scale-in hover:shadow-lg transition" style={{ animationDelay: '0.1s' }}>
               <CardHeader>
-                <Icon name="Zap" size={40} className="text-primary mb-4" />
-                <CardTitle>Современное оборудование</CardTitle>
+                <Icon name="Microscope" size={40} className="text-primary mb-4" />
+                <CardTitle>Лечение под микроскопом</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Используем новейшие технологии для точной диагностики и эффективного лечения
+                  3D-томография, цифровое протезирование и собственная лаборатория
                 </p>
               </CardContent>
             </Card>
             <Card className="animate-scale-in hover:shadow-lg transition" style={{ animationDelay: '0.2s' }}>
               <CardHeader>
-                <Icon name="Heart" size={40} className="text-primary mb-4" />
-                <CardTitle>Индивидуальный подход</CardTitle>
+                <Icon name="Percent" size={40} className="text-primary mb-4" />
+                <CardTitle>Скидка пенсионерам</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Разрабатываем персональный план лечения с учётом всех особенностей пациента
+                  Семейная стоматология: скидка 10% на все услуги для пенсионеров
                 </p>
               </CardContent>
             </Card>
             <Card className="animate-scale-in hover:shadow-lg transition" style={{ animationDelay: '0.3s' }}>
               <CardHeader>
                 <Icon name="MapPin" size={40} className="text-primary mb-4" />
-                <CardTitle>4 филиала</CardTitle>
+                <CardTitle>3 филиала</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Выбирайте удобное расположение в разных районах Норильска
+                  Норильск, Кайеркан и Дудинка. Выберите удобное расположение
                 </p>
               </CardContent>
             </Card>
